@@ -1,3 +1,17 @@
+
+/* PSEUDO ELEMENTI: per creare elementi grafici decorativi senza mettere uno span vuoti (SBAGLIATO) nei file html */
+
+/* h1::after,
+h1::before{
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: aquamarine;
+} */
+
+
 /* FLOAT
 
 consete di rimuovere dal normale flusso del doc e spostarlo sui lati
@@ -13,18 +27,15 @@ se metto float left o right il contenuto seguente va a destra o sinistra */
 }
 
 section .float-left{
-    float: left;
+    float: right;
 }
 
+/* proprietà clear (left,right,both) corregge i problemi adattivi di float.
+si mette classe .clearfix alla section 
+REGOLA: se utilizziamo float, al suo genitore mettiamo clearfix*/
 
-/* PSEUDO ELEMENTI: per creare elementi grafici decorativi senza mettere uno span vuoti (SBAGLIATO) nei file html */
-
-h1::after,
-h1::before{
+.clearfix::after{
     content: "";
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: aquamarine;
+    display:table;
+    clear:both;
 }
