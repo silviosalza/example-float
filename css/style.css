@@ -6,4 +6,16 @@ rende gli elementi simili agli inline block
 
 se metto float left il contenuto seguente va a destra */
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+section .float-left{
+    float: left;
+}
+
+section .float-right{
+    float: right;
+}
