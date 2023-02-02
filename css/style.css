@@ -4,7 +4,7 @@ consete di rimuovere dal normale flusso del doc e spostarlo sui lati
 non viene ereditata
 rende gli elementi simili agli inline block
 
-se metto float left il contenuto seguente va a destra */
+se metto float left o right il contenuto seguente va a destra o sinistra */
 
 *{
     margin: 0;
@@ -16,6 +16,15 @@ section .float-left{
     float: left;
 }
 
-section .float-right{
-    float: right;
+
+/* PSEUDO ELEMENTI: per creare elementi grafici decorativi senza mettere uno span vuoti (SBAGLIATO) nei file html */
+
+h1::after,
+h1::before{
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: aquamarine;
 }
