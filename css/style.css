@@ -27,7 +27,7 @@ se metto float left o right il contenuto seguente va a destra o sinistra */
 }
 
 section .float-left{
-    float: right;
+    float: left;
 }
 
 /* proprietà clear (left,right,both) corregge i problemi adattivi di float.
